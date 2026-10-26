@@ -70,5 +70,22 @@ font-family: 'Inter', sans-serif;
     max-width: 600px;
 }
 
+.showcase{
+    width: 100%;
+    max-width: 1400px;
+    margin-top: 3rem;
+    padding: 2rem;
+
+}
+
+.driver-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 15px 50px rgba(0, 0, 0, 0.8);
+    border-radius: 8px;
+}
+
+
 
 
