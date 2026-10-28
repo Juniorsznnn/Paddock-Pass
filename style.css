@@ -96,7 +96,7 @@ font-family: 'Inter', sans-serif;
 footer { background-color: #151a22;
      text-align: center;
       padding: 1rem;
-       color: #4a5568;
+       color: #045aed;
         font-size: 0.9rem;
          margin-top: auto;
          }
@@ -129,3 +129,20 @@ header {
      border-bottom: 2px solid #cc0000;
       padding: 1rem 5%; 
     }
+
+    table {
+         width: 100%;
+          border-collapse: collapse;
+           background-color: #151a22;
+            border-radius: 8px;
+             overflow: hidden; }
+th, td { padding: 1rem;
+     text-align: left;
+      border-bottom: 1px solid #2a3241;
+     }
+th {
+     background-color: #001a30; 
+    color: #a0aec0;
+     font-weight: normal;
+     }
+
