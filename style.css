@@ -180,3 +180,17 @@ button {
 button:hover { 
     background-color: #ff1a1a;
  }
+
+ .card { background-color: #151a22;
+     padding: 1.5rem; 
+     border-radius: 8px;
+      border: 1px solid #2a3241;
+     }
+
+.logo {
+     font-size: 1.5rem; 
+     font-weight: bold; 
+     color: #ffffff; 
+     margin: 0; 
+    }
+
