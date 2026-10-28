@@ -149,3 +149,34 @@ th {
         color: #48bb78;
      }
 
+.input1{ 
+    margin-bottom: 1.2rem;
+}
+label {
+     display: block;
+      margin-bottom: 0.4rem;
+       color: #a0aec0;
+        font-size: 0.9rem;
+     }
+input, select {
+     width: 100%;
+      padding: 0.8rem;
+       background-color: #0b0e14;
+        border: 1px solid #4a5568; 
+        color: white;
+         border-radius: 4px;
+         }
+button {
+     width: 100%;
+     padding: 1rem;
+      background-color: #cc0000;
+       color: white; 
+       border: none;
+        font-weight: bold;
+         border-radius: 4px;
+          cursor: pointer;
+           transition: 0.2s;
+         }
+button:hover { 
+    background-color: #ff1a1a;
+ }
