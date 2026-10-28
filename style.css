@@ -101,4 +101,26 @@ footer { background-color: #151a22;
          margin-top: auto;
          }
 
+ .laps {
+     text-align: center;
+     }
+.laps h3 {
+     margin: 0;
+     color: #a0aec0;
+      font-size: 0.9rem;
+       font-weight: normal;
+     }
+.value { 
+    font-size: 2.2rem;
+     font-weight: bold;
+      margin-top: 5px;
+    color: #ffffff;
+ }
+
+ .grid { 
+    display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+     }
+       
 
