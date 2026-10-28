@@ -124,3 +124,8 @@ footer { background-color: #151a22;
      }
        
 
+header { 
+    background-color: #151a22;
+     border-bottom: 2px solid #cc0000;
+      padding: 1rem 5%; 
+    }
