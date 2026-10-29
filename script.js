@@ -1,5 +1,6 @@
-let stintData []
-const form = document.getElementById("form");
+let stintData = JSON.parse(localStorage.getItem("paddockData")) || []
+
+const form = document.getElementById("form-log");
 if (form) {
     form.addEventListener("submit", function(event) {
         event.preventDefault();
@@ -12,6 +13,7 @@ if (form) {
         };
 
         stintData.push(newLap);
+        localStorage.setItem("paddockData", JSON.stringify(stintData));
         form.reset();
 
     });
@@ -20,7 +22,7 @@ if (form) {
 
 
 
-const historyTable =document.getElementById("table");
+const historyTable =document.getElementById("history-table");
 if (historyTable) {
     document.getElementById("total-laps").textContent = stintData.length;
 
@@ -52,27 +54,27 @@ historyTable.appendChild(tr);
 
 
 
-const input = document.getElementById("driver-search");
-const table = document.getElementById("analytics-table");
+const searchInput = document.getElementById("driver-search");
+const analyticsTable = document.getElementById("analytics-table");
 
-(input && table) {
+if (searchInput && analyticsTable) {
     function renderAnalytics(filterText){
-        table.innerHTML = "";
+        analyticsTable.innerHTML = "";
 
         for(let i = stintData.length -1; i >= 0; i--) {
         const lap = stintData[i];
-        if(filterText === ""   lap.driver.toLowerCase().includes(filterText.toLowerCase())) {
+        if(filterText === "" || lap.driver.toLowerCase().includes(filterText.toLowerCase())) {
             const tr = document.createElement("tr");
             tr.innerHTML = 
             `<td>${lap.driver}</td>
             <td class="${lap.compound}">${lap.compound}</td>
             <td>${lap.tme.toFixed(3)}</td>`;
-            table.appendChild(tr);
+            analyticsTable.appendChild(tr);
         }
     }
 }
 renderAnalytics("");
-input.addEventListener("keyup",function(){
-    renderAnalytics(input.value);
+searchInput.addEventListener("keyup",function(){
+    renderAnalytics(searchInput.value);
 })
 }
