@@ -47,3 +47,32 @@ if (historyTable) {
 historyTable.appendChild(tr);
     }
 }
+
+
+
+
+
+const input = document.getElementById("driver-search");
+const table = document.getElementById("analytics-table");
+
+(input && table){
+    function renderAnalytics(filterText){
+        table.innerHTML = "";
+
+        for(let i = stintData.length -1; i >= 0; i--) {
+        const lap = stintData[i];
+        if(filterText === "" lap.driver.toLowerCase().includes(filterText.toLowerCase())) {
+            const tr = document.createElement("tr");
+            tr.innerHTML = 
+            `<td>${lap.driver}</td>
+            <td class="${lap.compound}">${lap.compound}</td>
+            <td>${lap.tme.toFixed(3)}</td>`;
+            table.appendChild(tr);
+        }
+    }
+}
+renderAnalytics("");
+input.addEventListener("keyup",function(){
+    renderAnalytics(input.value);
+})
+}
