@@ -233,3 +233,11 @@ section {
 .Hard { color: white;
      font-weight: bold; 
     }
+
+@media (max-width: 768px) {
+     nav{
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+}
