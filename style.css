@@ -224,3 +224,12 @@ section {
 .h2{
     margin-top: 0;
 }
+.Soft { color: #fc8181;
+     font-weight: bold;
+     }
+.Medium { color: #f6e05e;
+     font-weight: bold; 
+    }
+.Hard { color: white;
+     font-weight: bold; 
+    }

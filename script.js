@@ -39,7 +39,7 @@ if (historyTable) {
 
 
 
-    for (let i = stintData.length -1; i >= 0; 1--){
+    for (let i = stintData.length -1; i >= 0; i--) {
         const lap = stintData[i];
         const tr = document.createElement("tr");
         tr.innerHTML =`
@@ -68,7 +68,7 @@ if (searchInput && analyticsTable) {
             tr.innerHTML = 
             `<td>${lap.driver}</td>
             <td class="${lap.compound}">${lap.compound}</td>
-            <td>${lap.tme.toFixed(3)}</td>`;
+            <td>${lap.time.toFixed(3)}</td>`;
             analyticsTable.appendChild(tr);
         }
     }
